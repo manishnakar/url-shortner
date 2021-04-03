@@ -1,0 +1,14 @@
+{
+  "name": "url-shortner",
+  "version": "1.0.0",
+  "description": "bitly clone",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "Manish Nakar",
+  "license": "ISC"
+}
