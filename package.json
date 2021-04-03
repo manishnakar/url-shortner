@@ -4,7 +4,7 @@
   "description": "bitly clone",
   "main": "index.js",
   "scripts": {
-    "start": "node index",
+    "start": "node -r dotenv/config index",
     "dev": "nodemon -r dotenv/config index"
   },
   "keywords": [

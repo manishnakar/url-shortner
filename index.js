@@ -7,7 +7,11 @@ const app = express();
 connectDB();
 
 app.use(express.json({extended: false}));
+app.use(express.urlencoded({extended: false}));
 
+// Define Routes
+app.use('/', require('./routes/index'));
+app.use('/api/url', require('./routes/shortUrl'));
 
 const port = process.env.PORT || 5001
 

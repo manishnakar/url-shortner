@@ -10,15 +10,15 @@
   * [x] nodemon 
   * [x] add start script in package.json    
 * [x] Create database
-  * [x] install mongoose
-  * [x] set db connection 
+  * [x] install mongoose and dotenv
+  * [x] set db connection in config folder
   * [x] create schema for url shortner
-* [ ] create url shortner   
+* [ ] create routes for shortner API   
   * [ ] install shortid   
   * [ ] create post request and save data in db
   * [ ] create get request and redirect short url to full url 
   * [ ] error handeling
-  * [ ] frontend code 
+* [ ] frontend code 
 * [ ] API doc 
 * [ ] security checks  
 * [ ] deployment 
