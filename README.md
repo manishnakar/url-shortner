@@ -2,10 +2,10 @@
 
 
 ## Check List
-* [ ] setup project
-  * [ ] git init
-  * [ ] install express 
-  * [ ] setup simple route and run application 
+* [x] setup project
+  * [x] git init
+  * [x] install express 
+  * [x] setup simple route and run application 
 * [ ] install dev dependencies 
   * [ ] nodemon 
   * [ ] add start script in package.json    
