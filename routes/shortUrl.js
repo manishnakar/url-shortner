@@ -7,7 +7,9 @@ const shortUrl = require('../models/shortUrl')
 
 router.post('/shorten', async (req, res) => {
 
+    //console.log(req.body);
    const {fullUrl } = req.body
+   
 
    if( fullUrl &&  !validUrl.isUri(fullUrl)){
         res.status(401).json('Invalid input URL')
@@ -19,7 +21,7 @@ router.post('/shorten', async (req, res) => {
        const urlExists = await shortUrl.findOne({ fullUrl });
        if(urlExists){
             res.json(urlExists)
-            console.log('fullUrl exists')
+            //console.log('fullUrl exists')
        }else{            
 
             const newShortUrl = new shortUrl({
@@ -28,12 +30,12 @@ router.post('/shorten', async (req, res) => {
             });
 
            await  newShortUrl.save();
-           console.log('new shortcode created')
+           //console.log('new shortcode created')
            res.json(newShortUrl)           
 
        }
    } catch (error) {
-       console.log(error);
+       //console.log(error);
        res.status(500).json('Server Error')
    }
 
