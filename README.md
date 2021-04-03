@@ -13,8 +13,8 @@
   * [x] install mongoose and dotenv
   * [x] set db connection in config folder
   * [x] create schema for url shortner
-* [ ] create routes for shortner API   
-  * [ ] install shortid   
+* [x] create routes for shortner API   
+  * [x] install shortid   
   * [ ] create post request and save data in db
   * [ ] create get request and redirect short url to full url 
   * [ ] error handeling
