@@ -1,6 +1,10 @@
 # url-shortner
 
-
+Shortening: Take a url and return a much shorter url. 
+Redirection: Take a short url and redirect to the original url.
+Custom url: Allow the users to pick custom shortened url. 
+Analytics: Usage statistics for site owner. 
+  Ex: How many people clicked the shortened url in the last day?  
 
 ## Check List
 * [x] setup project
@@ -28,9 +32,9 @@
 * [ ] Admin pane
   * [ ] view list of shortUrls created 
   * [ ] top clicks and other info  
-* [ ] frontend code 
+* [x] frontend code 
 * [ ] API doc 
-* [ ] security checks  
+* [x] security checks  
 * [ ] deployment 
 * [ ] test cases 
 * [ ] Code Coverage Metrics
