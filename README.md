@@ -18,9 +18,18 @@
   * [ ] create post request and save data in db
   * [ ] create get request and redirect short url to full url 
   * [ ] error handeling
+* [ ] Advance setup 
+  * [ ] add slug - custome code 
+  * [ ] set expiry to every short code created
+  * [ ] add redis for caching 
+  * [ ] rate limiting - throttle  
+* [ ] Admin pane
+  * [ ] view list of shortUrls created 
+  * [ ] top clicks and other info  
 * [ ] frontend code 
 * [ ] API doc 
 * [ ] security checks  
 * [ ] deployment 
 * [ ] test cases 
+* [ ] Code Coverage Metrics
 * [ ] CICD 
