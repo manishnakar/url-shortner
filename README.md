@@ -6,9 +6,9 @@
   * [x] git init
   * [x] install express 
   * [x] setup simple route and run application 
-* [ ] install dev dependencies 
-  * [ ] nodemon 
-  * [ ] add start script in package.json    
+* [x] install dev dependencies 
+  * [x] nodemon 
+  * [x] add start script in package.json    
 * [ ] Create database
   * [ ] install mongoose
   * [ ] set db connection 
