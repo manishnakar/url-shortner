@@ -4,15 +4,12 @@ const validUrl = require('valid-url')
 const shortid = require('shortid')
 const shortUrl = require('../models/shortUrl')
 
-router.get('/api/:shortUrl', (req, res) => {
-    res.send(' redirect to fullUrl ')
-})
 
 router.post('/shorten', async (req, res) => {
 
    const {fullUrl } = req.body
 
-   if(!validUrl.isUri(fullUrl)){
+   if( fullUrl &&  !validUrl.isUri(fullUrl)){
         res.status(401).json('Invalid input URL')
    }
 
@@ -41,6 +38,5 @@ router.post('/shorten', async (req, res) => {
    }
 
 })
-
 
 module.exports = router;
