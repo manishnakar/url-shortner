@@ -9,10 +9,10 @@
 * [x] install dev dependencies 
   * [x] nodemon 
   * [x] add start script in package.json    
-* [ ] Create database
-  * [ ] install mongoose
-  * [ ] set db connection 
-  * [ ] create schema for url shortner
+* [x] Create database
+  * [x] install mongoose
+  * [x] set db connection 
+  * [x] create schema for url shortner
 * [ ] create url shortner   
   * [ ] install shortid   
   * [ ] create post request and save data in db
