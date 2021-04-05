@@ -26,10 +26,10 @@ Ex: How many people clicked the shortened url in the last day?
   - [x] track clicks
   - [x] error handeling
 - [ ] Advance setup
-  - [ ] add slug - custome code
-  - [ ] set expiry to every short code created
+  - [x] add slug - custome code
+  - [x] set expiry to every short code created
   - [ ] add redis for caching
-  - [ ] rate limiting - throttle
+  - [x] rate limiting - throttle
 - [ ] Admin pane
   - [ ] view list of shortUrls created
   - [ ] top clicks and other info

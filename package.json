@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "bitly clone",
   "main": "index.js",
+  "author": "Manish Nakar <manish.nakar@gmail.com>",
   "scripts": {
     "start": "NODE_DEBUG=app* node -r dotenv/config index",
     "build": "rimraf build && npm run lint && babel ./src --out-dir build/src --copy-files  && npm run docs",
@@ -11,9 +12,11 @@
     "format": "prettier --write ."
   },
   "keywords": [
-    "nodejs"
+    "nodejs",
+    "javascript",
+    "url-shortner",
+    "bitly"
   ],
-  "author": "Manish Nakar",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
@@ -21,7 +24,10 @@
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "helmet": "^4.4.1",
+    "ioredis": "^4.25.0",
+    "moment": "^2.29.1",
     "mongoose": "^5.12.3",
+    "morgan": "^1.10.0",
     "shortid": "^2.2.16",
     "valid-url": "^1.0.9"
   },

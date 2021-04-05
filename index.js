@@ -4,11 +4,10 @@ import express from 'express'
 import connectDB from './config/db'
 import helmet from 'helmet'
 import cors from 'cors'
+import morgan from 'morgan'
+import { rateLimiter } from './middlewares'
 
 const app = express()
-
-// connecting to db
-connectDB()
 
 const corsOptions = {
   origin: process.env.CORS_ORIGIN,
@@ -20,6 +19,9 @@ const corsOptions = {
 if (process.env.CORS_ORIGIN === '*') {
   delete corsOptions.origin
 }
+
+app.use(morgan('tiny'))
+
 
 app.use(cors(corsOptions))
 app.use(helmet({
@@ -45,15 +47,20 @@ app.use(express.urlencoded({ limit: '50mb', extended: true, parameterLimit: 5000
 // setup view
 app.set('view engine', 'ejs')
 app.use(express.static('public'))
+// imoplement rate limitor on create shortlink API
+app.use('/api/url/shorten', rateLimiter)
 
-// Define Routes
-app.use('/', require('./routes/index'))
-app.use('/api/url', require('./routes/shortUrl'))
+// connecting to db
+connectDB()
 
 // Health Check API
 app.get('/health-check', (req, res, next) => {
   res.status(200).json('ok')
 })
+
+// Define Routes
+app.use('/', require('./routes/index'))
+app.use('/api/url', require('./routes/shortUrl'))
 
 app.use('*', (req, res, next) => {
   const error = {
