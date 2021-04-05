@@ -4,8 +4,10 @@
   "description": "bitly clone",
   "main": "index.js",
   "scripts": {
-    "start": "node -r dotenv/config index",
+    "start": "NODE_DEBUG=app* node -r dotenv/config index",
     "dev": "nodemon -r dotenv/config index",
+    "lint": "prettier --check .",
+    "format": "prettier --write .",
     "test-cover": "istanbul check-coverage"
   },
   "keywords": [
@@ -23,6 +25,20 @@
     "valid-url": "^1.0.9"
   },
   "devDependencies": {
-    "nodemon": "^2.0.7"
+    "eslint": "^7.23.0",
+    "husky": "^6.0.0",
+    "lint-staged": "^10.5.4",
+    "nodemon": "^2.0.7",
+    "prettier": "^2.2.1"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint . --fix"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
