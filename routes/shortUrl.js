@@ -1,11 +1,14 @@
-const express = require('express')
+'use strict'
+
+import express from 'express'
+import validUrl from 'valid-url'
+import shortid from 'shortid'
+import shortUrl from '../models/shortUrl'
+
 const router = express.Router()
-const validUrl = require('valid-url')
-const shortid = require('shortid')
-const shortUrl = require('../models/shortUrl')
 
 router.post('/shorten', async (req, res) => {
-  //console.log(req.body);
+  // console.log(req.body);
   const { fullUrl } = req.body
 
   if (fullUrl && !validUrl.isUri(fullUrl)) {
@@ -18,7 +21,7 @@ router.post('/shorten', async (req, res) => {
     const urlExists = await shortUrl.findOne({ fullUrl })
     if (urlExists) {
       res.json(urlExists)
-      //console.log('fullUrl exists')
+      // console.log('fullUrl exists')
     } else {
       const newShortUrl = new shortUrl({
         fullUrl,
@@ -26,11 +29,11 @@ router.post('/shorten', async (req, res) => {
       })
 
       await newShortUrl.save()
-      //console.log('new shortcode created')
+      // console.log('new shortcode created')
       res.json(newShortUrl)
     }
   } catch (error) {
-    //console.log(error);
+    // console.log(error);
     res.status(500).json('Server Error')
   }
 })

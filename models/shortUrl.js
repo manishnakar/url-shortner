@@ -1,4 +1,6 @@
-const mongoose = require('mongoose')
+'use strict'
+
+import mongoose from 'mongoose'
 
 const shortUrlSchema = new mongoose.Schema({
   fullUrl: { type: String, required: true },
